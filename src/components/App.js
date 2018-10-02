@@ -1,5 +1,5 @@
 import React from 'react';
-// import RedText from './RedText';
+import RedText from './RedText';
 
 export default class App extends React.Component {
 	state = {
@@ -14,6 +14,7 @@ export default class App extends React.Component {
 		return (
 			<div>
 				<h1>Type something!</h1>
+
 				<input
 					type="text"
 					onChange={this.handleChange}
@@ -26,9 +27,13 @@ export default class App extends React.Component {
 				<h3>This text is reversed</h3>
 				<p>{reverseString(this.state.text)}</p>
 
-				<h3>This text is normal</h3>
-				<p>{this.state.text}</p>
-				<span />
+				<h3>This text is red</h3>
+				<RedText>{this.state.text}</RedText>
+
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
+					alt=""
+				/>
 			</div>
 		);
 	}
